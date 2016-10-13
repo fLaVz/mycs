@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 	<head>
 		<title>Inscription</title>
-		<link href="style.css" rel="stylesheet" media="all" type="text/css"> 
+		<link href="css/style.css" rel="stylesheet" media="all" type="text/css"> 
 		<meta charset="utf-8" />
 		<meta name="author" content="Delvaux Julien"/>
 		<meta name="description" content="Mycs Default page" />
@@ -10,10 +10,10 @@
 	</head>
 
 	<body>
-		<form name="Sign up" method="POST" action="resultat.php" enctype="multipart/form-data">
+		<form name="Sign up" method="POST" action="register.php" enctype="multipart/form-data">
 			<label><b>Inscription : </b></label><br><br>
-			<input name="nom" type="text/html" placeholder="Pseudo"> <br>
-			<input name="prenom" type="text/html" placeholder="Adresse mail"> <br><br>
+			<input name="nick" type="text/html" placeholder="Pseudo"> <br>
+			<input name="mail" type="email" placeholder="Adresse mail"> <br><br>
 			<input class="button" type="submit" name="valider" value="Inscription">
 		</form>
 
