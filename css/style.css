@@ -6,7 +6,7 @@ html, body {
 	font-family: Arial;
 	color: white;
 	background-color: #F2F8FF;
-	margin-top: 3%;
+	margin-top: 1%;
 }
 
 html {
@@ -48,16 +48,22 @@ footer {
 /* BALISES CLASS */
 
 .button {
-	margin: 0.5%;
-	padding-bottom: 0.15%;
+	padding: 5%;
+	margin-top: 5%;
 	background-color: #3378B9;
 	border-style: solid;
-	border-radius: 5px;
+	border-radius: 7px;
+	border-color: white;
 	color: white;
 
 }
 
-
+.box {
+	padding: 4%;
+	margin-top: 5%;
+	border-style: solid;
+	border-radius: 3px;
+}
 
 /* BALISES ID */
 
@@ -78,11 +84,6 @@ footer {
 	top: 15%;
 	position: absolute;
 
-}
-
-#wform input {
-	padding: 4%;
-	margin-top: 5%;
 }
 
 
