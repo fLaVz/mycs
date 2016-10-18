@@ -1,20 +1,24 @@
+
+/* BALISES STANDARDS */
+
 html, body {
 
 	font-family: Arial;
 	color: white;
-	background-color: #1A1919;
-	text-align: center;
+	background-color: #F2F8FF;
 	margin-top: 3%;
 }
 
-.button {
-	margin: 0.5%;
-	padding-bottom: 0.15%;
-	background-color: #3378B9;
-	border-style: solid;
-	border-radius: 5px;
-	color: white;
+html {
+	height: 100%;
+}
 
+
+body {
+	min-height: 100%;
+	margin: 0;
+	padding: 0;
+	position: relative;
 }
 
 a {
@@ -27,6 +31,60 @@ a:hover {
 	text-decoration: none;
 	color: #1A3B5A;
 }
+
+footer {
+	text-align: center;
+	
+	bottom: 0;
+	left: 0;
+	right: 0;
+	background-color: #3E4A56;
+    position: absolute;
+
+}
+
+
+
+/* BALISES CLASS */
+
+.button {
+	margin: 0.5%;
+	padding-bottom: 0.15%;
+	background-color: #3378B9;
+	border-style: solid;
+	border-radius: 5px;
+	color: white;
+
+}
+
+
+
+/* BALISES ID */
+
+#content {
+	margin-left: 26%;
+	margin-top: 5%;
+}
+
+#welcome {
+	color: #242424;
+	position: absolute;
+
+
+}
+
+#wform {
+
+	top: 15%;
+	position: absolute;
+
+}
+
+#wform input {
+	padding: 4%;
+	margin-top: 5%;
+}
+
 
 #php {
 	border-radius: 10px;
