@@ -1,38 +1,52 @@
 <!DOCTYPE html>
 	<head>
-		<title>Register</title>
-		<link href="css/style.css" rel="stylesheet" media="all" type="text/css"> 
+		<title>Welcome to mycs</title>
+		<link href="css/style.css" rel="stylesheet" media="all" type="text/css">
+		<link rel="icon" href="images/favicon.ico" />
 		<meta charset="utf-8" />
-		<meta name="author" content="Delvaux Julien"/>
-		<meta name="description" content="Mycs Default page" />
-
-
+		<meta name="author" content="Delvaux 'flav' Julien"/>
+		<meta name="description" content="Mycs Index page" />
 	</head>
 
 	<body>
-		<?php
 
-		//VARIABLES POUR LA BDD
-		$user = "uapv1500182";
-		$pwd = "2QDwM4";		
+	<header>
+		<a href="index.html"><img src="images/cs.png" width=2% height="4%" alt="logo_cs_1.6"></a>
+		<p><b>MyCs</b></p>	
+		<a href="register.php"> <input type="button" name=register value="Register"></a>
+	</header>
+	
+	
 
-		//CONNEXION A LA BDD
-		$connect = new PDO("mysql:host=localhost;dbname=user", $user, $pwd);
+	<div id="content">
+		<div id="welcome">
+			<h2><b>Inscription</b></h2>
+			<p>Inscrivez-vous pour pouvoir accéder au différents <br> contenus du site !</p>
+		</div>
 
-		//RECUPERATION DES VARIABLES DU FORMULAIRE
+		<div id="wform">
+			<form name="signup" method="POST" action="register.php">
+				<input type="text/html" placeholder="pseudo"><br><br>
+				<input type="email" placeholder="email"><br><br>
+				<input type="password" placeholder="Mot de passe"> 
+				<input class="button" type="submit" name="signin" value="Inscription">
+			</form>
+		</div>
 
-
-
-
-		$reg = $connect->query(INSERT INTO user nick=)
-
-
-		echo 'Successfuly Registered !';
-		?>
+		
+	</div>
 
 	<footer>
-		<p>FOOOOOOOOOOTER</p>
+		<p>Website made by Delvaux Julien<br>
+		This is a small chat application in developement</p>
+		<p>All rights are reserved and registered</p>
 	</footer>
+
+	<?php
+	
+
+	 
+	?>
 
 	</body>
 </html>

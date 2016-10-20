@@ -1,59 +1,50 @@
 
 /* BALISES STANDARDS */
+* {
+	margin: 0;
+}
 
 html, body {
 
+	height: 100%;
 	font-family: Arial;
 	color: white;
 	background-color: #F2F8FF;
 	margin-top: 0%;
 }
 
-html {
-	height: 100%;
-}
 
-
-body {
-	min-height: 89.5%;
-	margin: 0;
-	padding: 0;
-	position: relative;
-}
-
-header{
+header {
 	z-index: 2;
-	margin-top: -5%;
-  	position: fixed;
+	position: fixed;
+
+	height: 40px;
   	width: 100%;
-  	text-align: center;
+
   	font-size: 15px;
+  	text-align: center;
+  	
   	background-color: #3E4A56;
   	color: #fff;
   	box-shadow: 1px 1px 2px rgba(0, 0, 0, .5);
-
 }
 
-header ul {
-	list-style-type: none;
-}
-
-header li {
-	display: inline;
+header p {
+	padding-top: 10px;
 }
 
 header img {
-	margin-left:-24%;
-	margin-top: 0.3%;
+
+	left: 500px;
+	top: 2px;
 	position: fixed;
 	cursor: pointer;
 }
 
 header input {
 
-	margin-left:19%;
-	margin-top: -2% ;
-	padding: 0.2%;
+	right: 500px;
+	top: 10px;
 	position: fixed;
 	background-color: #53667A;
 	border: solid;
@@ -63,6 +54,7 @@ header input {
 	font-weight: bold;
 	color: white;
 	cursor:pointer;
+
 }
 
 
@@ -78,23 +70,22 @@ a:hover {
 	color: #407BB2;
 }
 
-#wform a {
-	position: absolute;
-	margin-top: -4%;
-}
 
+
+
+footer, .push {
+	height: 100px;
+}
 
 footer {
-	text-align: center;
-	bottom: 0;
-	left: 0;
-	right: 0;
-	background-color: #3E4A56;
-    position: absolute;
 
+	text-align: center;
+	background-color: #3E4A56;
 }
 
-
+footer p {
+	padding-top: 15px;
+}
 
 /* BALISES CLASS */
 
@@ -122,19 +113,25 @@ footer {
 
 /* BALISES ID */
 
-#content {
-	margin-left: 26%;
-	margin-top: 5%;
+#wrapper {
+	min-height: 100%;
+	height: auto !important;
+	height: 100%;
+	margin: 0 auto -100px;
+
 }
 
 #welcome {
 	color: #242424;
 	position: absolute;
+	left: 500px;
+	top: 150px;
 }
 
 #wform {
 
-	top: 15%;
+	top: 240px;
+	left: 500px;
 	position: absolute;
 
 }
