@@ -10,37 +10,28 @@
 
 	<body>
 
-	<div id="wrapper">
-
 		<header>
-			<a href="index.html"><img src="images/cs.png" width=2% height="4%" alt="logo_cs_1.6"></a>
-			<p><b>MyCs</b></p>	
-			<a href="register.php"> <input type="button" name=register value="Register"></a>
+			<div id="logo">
+				<img src="images/cs.png" alt="logocs">
+			</div>
+			<p class="titre">MyCs</p>	
 		</header>
 
-			<div id="welcome">
+		<div id="content">		
 				<h2><b>Connectez-vous !</b></h2>
 				<p>Connectez-vous pour pouvoir acceder au contenu de la page <br>principale et discuter avec les membres de votre équipe !</p>
-			</div>
-
-			<div id="wform">
+		
 				<form name="signin" method="POST">
 					<input class="box" type="email" placeholder="email"><br>
-					<input class="box" type="password" placeholder="Mot de passe"> 
+					<input class="box" type="password" placeholder="Mot de passe"><br>
 					<input class="button" type="submit" name="signin" value="Connexion">
 				</form>
-				<p><a href="recovery.html">Mot de passe oublié ?</a></p>
-			</div>
+				<p class="forgot"><a href="recovery.html">Mot de passe oublié ?</a></p>
+		</div>
 
-		<div class="push"></div>
-
-	</div>
-
-	<footer>
-		<p>Website made by Delvaux Julien<br>
-		This is a small chat application in developement</p>
-		<p>All rights are reserved and registered</p>
-	</footer>
-
+		<footer>
+			<p>This is a small chat application in developement</p>
+			<p>Copyright &copy; Mycs <br>All rights are reserved and registered</p>
+		</footer>
 	</body>
 </html>

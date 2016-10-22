@@ -1,62 +1,79 @@
-
-/* BALISES STANDARDS */
-* {
-	margin: 0;
-}
-
-html, body {
-
+html {
 	height: 100%;
-	font-family: Arial;
-	color: white;
-	background-color: #F2F8FF;
-	margin-top: 0%;
+	margin: 0;
+	min-width: 1000px;
 }
 
+body {
+	display: flex;
+	flex-direction: column;
+	flex
+
+	min-height: 800px; 					/* A changer */
+	height: 100%;
+	margin: 0;
+
+	font-family: Arial;
+	font-size: 15px;
+	color: black;
+	background-color: #F2F8FF;
+}
 
 header {
-	z-index: 2;
+	z-index: 5;
+
+	margin-left: auto;
+	margin-right: auto;
+
+	height: 45px;
+	width: 100%;
+	min-width: 1000px;
+	
 	position: fixed;
-
-	height: 40px;
-  	width: 100%;
-
-  	font-size: 15px;
-  	text-align: center;
-  	
-  	background-color: #3E4A56;
-  	color: #fff;
-  	box-shadow: 1px 1px 2px rgba(0, 0, 0, .5);
-}
-
-header p {
-	padding-top: 10px;
+	background-color: #374556;
 }
 
 header img {
+	margin-top: 3px;
+	margin-left:auto;
+	margin-right: auto;
 
-	left: 500px;
-	top: 2px;
-	position: fixed;
-	cursor: pointer;
+	height: 40px;
+	
 }
 
-header input {
+.titre {
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: -35px;
 
-	right: 500px;
-	top: 10px;
-	position: fixed;
-	background-color: #53667A;
-	border: solid;
-	border-width: 1px;
-	border-radius: 4px;
-	border-color: white;
+	text-align: center;
 	font-weight: bold;
 	color: white;
-	cursor:pointer;
+}
+
+footer {
+	min-width: 1000px;
+	bottom:0;
+	color: white;
+	background-color: #374556;
+}
+
+footer p {
+
+	text-align: center;
 
 }
 
+
+
+.box {
+	padding: 10px;
+	margin-top: 20px;
+	border-style: solid;
+	border-radius: 6px;
+	width: 200px;
+}
 
 a {
 	font-size: 12px;
@@ -70,29 +87,10 @@ a:hover {
 	color: #407BB2;
 }
 
-
-
-
-footer, .push {
-	height: 100px;
-}
-
-footer {
-
-	text-align: center;
-	background-color: #3E4A56;
-}
-
-footer p {
-	padding-top: 15px;
-}
-
-/* BALISES CLASS */
-
 .button {
-	padding: 5%;
-	margin-top: 5%;
-	margin-left: -1%;
+	padding: 15px;
+	margin-top: 5px;
+	margin-left: -2px;
 	background-color: #3378B9;
 	border-style: solid;
 	border-radius: 7px;
@@ -103,50 +101,17 @@ footer p {
 
 }
 
-.box {
-	padding: 4%;
-	margin-top: 5%;
-	border-style: solid;
-	border-radius: 3px;
-	width: 80%;
-}
-
-/* BALISES ID */
-
-#wrapper {
-	min-height: 100%;
-	height: auto !important;
-	height: 100%;
-	margin: 0 auto -100px;
-
-}
-
-#welcome {
-	color: #242424;
-	position: absolute;
-	left: 500px;
-	top: 150px;
-}
-
-#wform {
-
-	top: 240px;
-	left: 500px;
-	position: absolute;
-
+.forgot {
+	margin-top: 0px;
 }
 
 
-#php {
-	border-radius: 10px;
-	padding: 0.4%;
-	background-color: #FFFFFF;
-	box-shadow: 1px 1px 2px 1px #656565;
-}
 
-#browser {
-	
-	position: absolute;
-	margin-left: 85%;
-	margin-top: -15%;
+#content {
+	margin-top: 150px;
+	margin-left: auto;
+   	margin-right: auto;
+   	width: 1000px;
+	flex-grow: 1;
+	background-color: grey;
 }
