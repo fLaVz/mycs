@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 	<head>
 		<title>Welcome to mycs</title>
-		<link href="css/style.css" rel="stylesheet" media="all" type="text/css">
+		<link href="../css/style2.css" rel="stylesheet" media="all" type="text/css">
 		<link rel="icon" href="images/favicon.ico" />
 		<meta charset="utf-8" />
 		<meta name="author" content="Delvaux 'flav' Julien"/>
@@ -16,11 +16,10 @@
 
 		<div id="content">
 			<?php
-			include_once("php/connect_db.php");
-			define('PREFIXE_SHA1', 'p8%B;Qdf78');
+			include_once("connect_db.php");
 
 			$connect = connect_db();
-			if(!$conn) {
+			if(!$connect) {
 					echo "<p style='color:red;'>Impossible de se connecter à la bdd</p>";
 					return;
 			}
@@ -28,27 +27,51 @@
 			$m_user = $_REQUEST['nick'];
 			$m_pwd = $_REQUEST['pwd'];
 			$m_email = $_REQUEST['email'];
-			$today = date("m.d.y");
- 
-			$pwd_sha1 = sha1(PREFIXE_SHA1.$mdp);
+			
+			$today = date("Y-m-d");
 
-			try { // Insère l'utilisateur
-				$insert = $connect->prepare("INSERT INTO user (nick,password,email,date)
-	                            VALUES (:nick,:password,:email,:date)");
-				$insert->bindParam(':nick', $m_user, PDO::PARAM_STR,15);
-				$insert->bindParam(':password', $pwd_sha1, PDO::PARAM_STR,32);
-				$insert->bindParam(':email', $m_email, PDO::PARAM_STR,15);
-				$insert->bindParam(':date', $today, PDO::PARAM_STR,30);
+			$continue = 1;
+ 
+			$pwd_sha1 = sha1($m_pwd);
+
+			try {
+				$user_exists = $connect->prepare("SELECT nick FROM user WHERE nick = :nick");
+				$user_exists->bindParam(':nick', $m_user , PDO::PARAM_STR,255);
+				$user_exists->execute();
+
+				if(!$user_exists || $user_exists->rowCount() > 0) { 
+					echo "<p style='color:red;'>Un autre utilisateur avec le même pseudo existe déjà!</p>";
+					echo '<p>Redirection...</p>';
+					$continue = 0;
+					header("Refresh: 4; url=../index.html");
 				
-				$insert->execute();
-				return true;
-				
+				}
 			}catch(Exception $e) {
 				echo "<br/>" . $e->getMessage() . "<br/>";
-				return false;
+				
 			}
 
 
+			if($continue == 1) {
+
+				try { // Insère l'utilisateur
+					$insert = $connect->prepare("INSERT INTO user (nick,password,email,date)
+		                            VALUES (:nick,:password,:email,:date)");
+					$insert->bindParam(':nick', $m_user, PDO::PARAM_STR,255);
+					$insert->bindParam(':password', $pwd_sha1, PDO::PARAM_STR,255);
+					$insert->bindParam(':email', $m_email, PDO::PARAM_STR,255);
+					$insert->bindParam(':date', $today, PDO::PARAM_INT,30);
+					
+					$insert->execute();
+					echo '<p>Votre inscription a bien été prise en compte, merci !</p>';
+					echo '<p>Redirection...</p>';
+					header("Refresh: 4; url=../index.html");
+
+
+				}catch(Exception $e) {
+					echo "<br/>" . $e->getMessage() . "<br/>";
+				}
+			}
 			?>
 		</div>
 
