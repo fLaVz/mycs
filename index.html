@@ -11,22 +11,34 @@
 	<body>
 
 		<header>
-			<div id="logo">
-				<img src="images/cs.png" alt="logocs">
-			</div>
-			<p class="titre">MyCs</p>	
+			<p class="titre">MyCs</p>
 		</header>
 
-		<div id="content">		
-				<h2><b>Connectez-vous !</b></h2>
-				<p>Connectez-vous pour pouvoir acceder au contenu de la page <br>principale et discuter avec les membres de votre équipe !</p>
-		
-				<form name="signin" method="POST">
+		<div id="content">
+			<div id="connect">	
+				<h2>Connectez-vous !</h2>
+				<p>Connectez-vous pour pouvoir acceder<br> au contenu de la page  principale <br>et discuter avec les membres de votre équipe.</p>
+				
+				<form name="signin" method="POST" action="php/signin.php">
 					<input class="box" type="email" placeholder="email"><br>
 					<input class="box" type="password" placeholder="Mot de passe"><br>
 					<input class="button" type="submit" name="signin" value="Connexion">
 				</form>
 				<p class="forgot"><a href="recovery.html">Mot de passe oublié ?</a></p>
+			</div>
+
+			<div id="vertical"></div>
+
+			<div id="register">
+				<h2>Enregistrez-vous !</h2>
+				<p>Enregistrez-vous pour découvrir l'application <br> et peut-être l'adopter !<p>
+				<form name="signin" method="POST" action="php/signup.php">
+					<input class="box" name="email" type="email" placeholder="email"><br>
+					<input class="box" name="nick" type="text/html" placeholder="pseudo"><br>
+					<input class="box" name="pwd" type="password" placeholder="Mot de passe"><br>
+					<input class="button" type="submit" name="signin" value="S'enregistrer">
+				</form>
+			</div>
 		</div>
 
 		<footer>

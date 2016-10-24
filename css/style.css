@@ -31,21 +31,15 @@ header {
 	
 	position: fixed;
 	background-color: #374556;
-}
 
-header img {
-	margin-top: 3px;
-	margin-left:auto;
-	margin-right: auto;
-
-	height: 40px;
 	
+ 	box-shadow: 0px 3px 4px rgba(100, 100, 100, 0.80);
 }
+
 
 .titre {
 	margin-left: auto;
 	margin-right: auto;
-	margin-top: -35px;
 
 	text-align: center;
 	font-weight: bold;
@@ -108,10 +102,29 @@ a:hover {
 
 
 #content {
+	display: flex;
+	justify-content: space-around;
+
 	margin-top: 150px;
 	margin-left: auto;
    	margin-right: auto;
    	width: 1000px;
 	flex-grow: 1;
-	background-color: grey;
+
+	color: #242424;
 }
+
+#vertical {
+
+
+	width:10px;
+	border-left:1px solid;
+	border-color: #bcbcbd;
+	height:500px;
+}
+
+#register {
+	
+}
+
+
