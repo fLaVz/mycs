@@ -11,13 +11,18 @@
 	<body>
 
 		<header>
-			<p class="titre">MyCs</p>
+			<div id="header_bloc">
+
+				<img id="cs" src="images/cs.png">
+				<img id="mycslogo" src="images/mycsLogo.png">
+				<input class="register" type="submit" name="signin" value="S'enregistrer"> 
+			</div>
 		</header>
 
 		<div id="content">
-			<div id="connect">	
+			<div id="welcome">
 				<h2>Connectez-vous !</h2>
-				<p>Connectez-vous pour pouvoir acceder<br> au contenu de la page  principale <br>et discuter avec les membres de votre équipe.</p>
+				<p>Connectez-vous pour pouvoir acceder au contenu de la page  principale et discuter avec les membres de votre équipe.</p>
 				
 				<form name="signin" method="POST" action="php/signin.php">
 					<input class="box" name="email" type="email" placeholder="email"><br>
@@ -25,11 +30,10 @@
 					<input class="button" type="submit" name="signin" value="Connexion">
 				</form>
 				<p class="forgot"><a href="recovery.html">Mot de passe oublié ?</a></p>
-			</div>
+		
 
-			<div id="vertical"></div>
 
-			<div id="register">
+			<!--<div id="register">
 				<h2>Enregistrez-vous !</h2>
 				<p>Enregistrez-vous pour découvrir l'application <br> et peut-être l'adopter !<p>
 				<form name="signin" method="POST" action="php/signup.php">
@@ -37,7 +41,7 @@
 					<input class="box" name="nick" type="text/html" placeholder="pseudo"><br>
 					<input class="box" name="pwd" type="password" placeholder="Mot de passe"><br>
 					<input class="button" type="submit" name="signin" value="S'enregistrer">
-				</form>
+				</form> -->
 			</div>
 		</div>
 

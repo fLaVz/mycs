@@ -7,7 +7,8 @@ html {
 body {
 	display: flex;
 	flex-direction: column;
-	flex
+
+	
 
 	min-height: 800px; 					/* A changer */
 	height: 100%;
@@ -20,7 +21,7 @@ body {
 }
 
 header {
-	z-index: 5;
+	z-index: 3;
 
 	margin-left: auto;
 	margin-right: auto;
@@ -33,9 +34,26 @@ header {
 	background-color: #374556;
 
 	
- 	box-shadow: 0px 3px 4px rgba(100, 100, 100, 0.80);
+ 	box-shadow: 0px 1px 2px rgba(100, 100, 100, 0.80);
 }
 
+#header_bloc {
+
+	display: flex;
+	justify-content: space-between;
+
+	margin-top:4px;
+	margin-left: auto;
+	margin-right: auto;
+	z-index: 10;
+	width: 900px;
+}
+
+#cs, #mycslogo {
+
+	display: block;
+	height:40px;
+}
 
 .titre {
 	margin-left: auto;
@@ -86,7 +104,7 @@ a:hover {
 	margin-top: 5px;
 	margin-left: -2px;
 	background-color: #3378B9;
-	border-style: solid;
+	border-style: none;
 	border-radius: 7px;
 	border-color: white;
 	font-weight: bold;
@@ -102,29 +120,45 @@ a:hover {
 
 
 #content {
-	display: flex;
-	justify-content: space-around;
 
-	margin-top: 150px;
 	margin-left: auto;
    	margin-right: auto;
-   	width: 1000px;
+   	margin-top: 150px;
+	margin-bottom: 50px;
+	width: 900px;
+
 	flex-grow: 1;
 
-	color: #242424;
 }
 
-#vertical {
+#welcome {
 
-
-	width:10px;
-	border-left:1px solid;
-	border-color: #bcbcbd;
-	height:500px;
-}
-
-#register {
 	
+	padding: 15px;
+	padding-right: -40px;
+	padding-bottom: 200px;
+	width: 380px;
+
+	border-style: none;
+	border-radius: 7px;
+	border-color: white;
+	font-weight: bold;
+	color: white;
+	background-color: #374556;
+
 }
 
+.register {
 
+	height: 40px;
+	padding: 1px;
+	margin-top: -2px;
+	background-color: #3378B9;
+	border-style: none;
+	border-radius: 5px;
+	border-color: white;
+
+	font-weight: bold;
+	color: white;
+	cursor:pointer;
+}
